@@ -1,0 +1,87 @@
+﻿@model IEnumerable<AmazonStoreMVC.Models.Product>
+
+@{
+    ViewData["Title"] = "Products List";
+}
+
+<h2>Products List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Unit Price</th>
+            <th>Quantity</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Id</td>
+                <td>@product.Title</td>
+                <td>@product.Description</td>
+                <td>@product.UnitPrice</td>
+                <td>@product.Quantity</td>
+                <td>
+                    <!-- Update Button triggers modal -->
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateModal-@product.Id">Update</button>
+                    <form asp-action="Delete" asp-route-id="@product.Id" method="post" style="display:inline;">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+
+                    <!-- Update Modal -->
+                    <div class="modal fade" id="updateModal-@product.Id" tabindex="-1" aria-labelledby="updateModalLabel-@product.Id" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="updateModalLabel-@product.Id">Update Product</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form asp-action="Update" method="post">
+                                        <input type="hidden" name="Id" value="@product.Id" />
+                                        <div class="form-group">
+                                            <label for="Title-@product.Id" class="control-label">Title</label>
+                                            <input id="Title-@product.Id" name="Title" class="form-control" value="@product.Title" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="Description-@product.Id" class="control-label">Description</label>
+                                            <textarea id="Description-@product.Id" name="Description" class="form-control">@product.Description</textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="UnitPrice-@product.Id" class="control-label">Unit Price</label>
+                                            <input id="UnitPrice-@product.Id" name="UnitPrice" class="form-control" value="@product.UnitPrice" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="Quantity-@product.Id" class="control-label">Quantity</label>
+                                            <input id="Quantity-@product.Id" name="Quantity" class="form-control" value="@product.Quantity" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="ImageUrl-@product.Id" class="control-label">Image URL</label>
+                                            <input id="ImageUrl-@product.Id" name="ImageUrl" class="form-control" value="@product.ImageUrl" />
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<p>
+    <a asp-action="AddProduct" class="btn btn-success">Add New Product</a>
+</p>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

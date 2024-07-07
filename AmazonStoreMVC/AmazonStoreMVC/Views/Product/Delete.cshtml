@@ -1,0 +1,44 @@
+﻿@model AmazonStoreMVC.Models.Product
+
+@{
+    ViewData["Title"] = "Delete Product";
+}
+
+<h1>Delete Product By ID</h1>
+
+<form asp-action="Delete" method="post">
+    <div class="form-group">
+        <label for="productId">Product ID</label>
+        <input type="number" class="form-control" id="productId" name="id" required />
+    </div>
+    <button type="submit" class="btn btn-danger">Delete</button>
+</form>
+
+@if (Model != null)
+{
+    <h2>@Model.Title</h2>
+
+    <div>
+        <dl class="row">
+            <dt class="col-sm-2">ID</dt>
+            <dd class="col-sm-10">@Model.Id</dd>
+            <dt class="col-sm-2">Description</dt>
+            <dd class="col-sm-10">@Model.Description</dd>
+            <dt class="col-sm-2">Unit Price</dt>
+            <dd class="col-sm-10">@Model.UnitPrice</dd>
+            <dt class="col-sm-2">Quantity</dt>
+            <dd class="col-sm-10">@Model.Quantity</dd>
+            <dt class="col-sm-2">Image URL</dt>
+            <dd class="col-sm-10"><img src="@Model.ImageUrl" alt="@Model.Title" class="img-fluid" /></dd>
+        </dl>
+    </div>
+
+    <form asp-action="Delete" method="post">
+        <input type="hidden" name="id" value="@Model.Id" />
+        <button type="submit" class="btn btn-danger">Confirm Delete</button>
+    </form>
+}
+
+<p>
+    <a asp-action="GetProducts" class="btn btn-primary">Back to List</a>
+</p>
