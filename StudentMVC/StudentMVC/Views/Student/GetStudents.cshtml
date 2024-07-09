@@ -1,0 +1,29 @@
+﻿@model List<StudentMVC.Models.Student>
+
+@{
+    ViewData["Title"] = "Students List";
+}
+
+<h1>Students List</h1>
+
+@if (Model != null && Model.Any())
+{
+    <ul>
+        @foreach (var student in Model)
+        {
+            <li>
+                <strong>ID:</strong> @student.id,
+                <strong>Name:</strong> @student.name,
+                <strong>Email:</strong> @student.email,
+                <strong>Address:</strong> @student.address,
+                <strong>Date:</strong> @student.date.ToString("yyyy-MM-dd"),
+                <strong>Fees:</strong> @student.fees,
+                <strong>Status:</strong> @student.status
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>No students found.</p>
+}

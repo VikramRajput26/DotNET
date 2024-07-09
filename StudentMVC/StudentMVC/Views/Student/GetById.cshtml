@@ -1,0 +1,32 @@
+﻿@model StudentMVC.Models.Student
+
+@{
+    ViewData["Title"] = "Get Student by Id";
+}
+
+<h1>Get Student by Id</h1>
+
+<form asp-controller="Student" asp-action="GetById" method="post">
+    <div>
+        <label for="studentId">Enter Student ID:</label>
+        <input type="text" id="studentId" name="id" />
+        <button type="submit">Get Student</button>
+    </div>
+</form>
+
+@if (Model != null)
+{
+    <h2>Student Details</h2>
+    <ul>
+        <li><strong>Name:</strong> @Model.name</li>
+        <li><strong>Email:</strong> @Model.email</li>
+        <li><strong>Address:</strong> @Model.address</li>
+        <li><strong>Date:</strong> @Model.date.ToString("yyyy-MM-dd")</li>
+        <li><strong>Fees:</strong> @Model.fees</li>
+        <li><strong>Status:</strong> @Model.status</li>
+    </ul>
+}
+else if (Model == null && ViewData["NotFound"] != null)
+{
+    <p>No student found with the specified ID.</p>
+}

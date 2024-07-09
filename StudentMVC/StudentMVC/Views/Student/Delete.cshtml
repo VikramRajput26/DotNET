@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Delete Student";
+}
+
+<h1>Delete Student</h1>
+
+<form asp-controller="Student" asp-action="Delete" method="post">
+    <div>
+        <label for="studentId">Enter Student ID to Delete:</label>
+        <input type="text" id="studentId" name="id" />
+        <button type="submit">Delete Student</button>
+    </div>
+</form>
