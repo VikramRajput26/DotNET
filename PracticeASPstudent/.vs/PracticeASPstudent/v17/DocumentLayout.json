@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\.NET_Practice\\PracticeASPstudent\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AD13D43A-4E6E-4439-B604-D84474AD9C75}|PracticeASPstudent\\PracticeASPstudent.csproj|d:\\.net_practice\\practiceaspstudent\\practiceaspstudent\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD13D43A-4E6E-4439-B604-D84474AD9C75}|PracticeASPstudent\\PracticeASPstudent.csproj|solutionrelative:practiceaspstudent\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD13D43A-4E6E-4439-B604-D84474AD9C75}|PracticeASPstudent\\PracticeASPstudent.csproj|d:\\.net_practice\\practiceaspstudent\\practiceaspstudent\\repositories\\studentcollectioncontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD13D43A-4E6E-4439-B604-D84474AD9C75}|PracticeASPstudent\\PracticeASPstudent.csproj|solutionrelative:practiceaspstudent\\repositories\\studentcollectioncontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "D:\\.NET_Practice\\PracticeASPstudent\\PracticeASPstudent\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "PracticeASPstudent\\Controllers\\StudentController.cs",
+              "ToolTip": "D:\\.NET_Practice\\PracticeASPstudent\\PracticeASPstudent\\Controllers\\StudentController.cs",
+              "RelativeToolTip": "PracticeASPstudent\\Controllers\\StudentController.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAQwCQAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-09T17:56:25.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StudentCollectionContext.cs",
+              "DocumentMoniker": "D:\\.NET_Practice\\PracticeASPstudent\\PracticeASPstudent\\Repositories\\StudentCollectionContext.cs",
+              "RelativeDocumentMoniker": "PracticeASPstudent\\Repositories\\StudentCollectionContext.cs",
+              "ToolTip": "D:\\.NET_Practice\\PracticeASPstudent\\PracticeASPstudent\\Repositories\\StudentCollectionContext.cs",
+              "RelativeToolTip": "PracticeASPstudent\\Repositories\\StudentCollectionContext.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAA2wA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-09T17:38:51.831Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+@PracticeASPstudent_HostAddress = http://localhost:5078
+
+GET {{PracticeASPstudent_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
